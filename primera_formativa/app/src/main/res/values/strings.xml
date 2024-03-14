@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">primera_formativa</string>
+    <string name="user">Usuario</string>
+    <string name="Password">Contraseña</string>
+    <string name="terminos_condiciones">Aceptar terminos y condiciones</string>
+    <string name="Ingresar">INGRESAR</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="math">MATEMATICAS</string>
+    <string name="physics">FISICA</string>
+    <string name="text">TEXTO</string>
+    <string name="Exit">SALIR</string>
+    <string name="temperature">Temperatura</string>
+    <string name="color_change">Cambios colores</string>
+    <string name="calculate">CALCULAR</string>
+</resources>
