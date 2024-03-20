@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity //implements View.OnClickLis
             @Override
             public void onClick(View main) {
                 if (terminos_condiciones.isChecked()) {
-                    if (usuario.getText().toString().equalsIgnoreCase("Admin") &&
-                            password.getText().toString().equalsIgnoreCase("admin123")) {
+                    if (usuario.getText().toString().equals("Admin") &&
+                            password.getText().toString().equals("admin123")) {
                         barra.setVisibility(View.VISIBLE);
                         Handler manejador = new Handler();
                         manejador.post(new Runnable() {

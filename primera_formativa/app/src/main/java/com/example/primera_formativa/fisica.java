@@ -17,7 +17,6 @@ public class fisica extends AppCompatActivity {
 
     EditText Masa , Fuerza, Acceleracion;
     Button calcular;
-    ImageButton atraz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,6 @@ public class fisica extends AppCompatActivity {
         Fuerza=(EditText) findViewById(R.id.fuerza);
         Acceleracion=(EditText) findViewById(R.id.acceleracion);
         calcular= (Button) findViewById(R.id.calcular_fuerza);
-        atraz= (ImageButton) findViewById(R.id.atraz_fisica);
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,14 +36,5 @@ public class fisica extends AppCompatActivity {
                 Fuerza.setText(String.valueOf(force));
             }
         });
-
-        atraz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), home.class);
-                startActivity(i);
-            }
-        });
-
     }
 }

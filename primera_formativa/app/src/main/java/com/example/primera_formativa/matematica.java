@@ -17,7 +17,6 @@ public class matematica extends AppCompatActivity {
 
     EditText puntoA, puntoB, resultado;
     Button calcular;
-    ImageButton atraz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class matematica extends AppCompatActivity {
         puntoB=(EditText) findViewById(R.id.puntoB);
         resultado=(EditText) findViewById(R.id.resultado_puntos);
         calcular= (Button) findViewById(R.id.calcular_dos_puntos);
-        atraz= (ImageButton) findViewById(R.id.atraz_matematica);
+
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,16 +38,13 @@ public class matematica extends AppCompatActivity {
                 int x2 = Integer.parseInt(PB[0]);
                 int y2 = Integer.parseInt(PB[1]);
 
-                double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-                resultado.setText(String.valueOf(distancia));
-            }
-        });
-
-        atraz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), home.class);
-                startActivity(i);
+                if (y1 == y2) {
+                   resultado.setText(String.valueOf(Math.abs(x2-x1)));
+                } else if (x2 == x1) {
+                    resultado.setText(String.valueOf(Math.abs(y2-y1)));
+                } else {
+                    double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                    resultado.setText(String.valueOf(distancia));}
             }
         });
     }

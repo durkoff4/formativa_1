@@ -19,13 +19,11 @@ public class texto extends AppCompatActivity {
     EditText txt;
     CheckBox negrita, cursiva;
     Button agrandar, reducir;
-    ImageButton atraz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_texto);
-        atraz = (ImageButton) findViewById(R.id.atraz_texto);
         txt = (EditText) findViewById(R.id.txt);
         agrandar = (Button) findViewById(R.id.aumentar_txt);
         reducir = (Button) findViewById(R.id.disminuir_txt);
@@ -65,14 +63,6 @@ public class texto extends AppCompatActivity {
                     newSizePx = 1;
                 }
                 txt.setTextSize(TypedValue.COMPLEX_UNIT_PX, newSizePx);
-            }
-        });
-
-        atraz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), home.class);
-                startActivity(i);
             }
         });
     }
